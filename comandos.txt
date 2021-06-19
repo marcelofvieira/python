@@ -1,0 +1,52 @@
+#================================================================================
+#VAGRANT
+#================================================================================
+#Ligar a máquina do Vagrant (Acessar cmd no diretório do projeto)
+
+vagrant up
+vagrant resume
+
+#Desligar a vm sem destruir
+
+vagrant suspend
+
+#Reinicializar a vm
+
+vagrant reload
+
+#Acessar a máquina por ssh
+
+vagrant ssh
+
+#================================================================================
+#VAGRANT LINUX
+#================================================================================
+#Set o ENV do linux para acessar a pasta local projeto no host
+
+python -m venv ~/env
+
+#Ativar o ambiente
+
+source ~/env/bin/activate
+
+#================================================================================
+#PYTHON
+#================================================================================
+#Instalar requisitos
+pip install -r requirements.txt
+
+#================================================================================
+#DJANGO
+#================================================================================
+#Criar novo projeto django
+django-admin.py startproject profiles_project .
+
+#Criar novo app dentro do django
+python manage.py startapp profiles_api
+
+#Iniciar o app
+python manage.py runserver 0.0.0.0:8000
+
+#================================================================================
+#BANCO DE DADOS
+#================================================================================
