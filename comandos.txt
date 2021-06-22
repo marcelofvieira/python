@@ -47,6 +47,13 @@ python manage.py startapp profiles_api
 #Iniciar o app
 python manage.py runserver 0.0.0.0:8000
 
+#Sempre que for adicionado/alterado um model é necessário criar um arquivo de migração para isso executar o comando abaixo (precisa do env setado)
+python manage.py makemigrations profiles_api
+
+#Para executar a migração executar o comando
+ python manage.py migrate
+ 
+
 #================================================================================
 #BANCO DE DADOS
 #================================================================================
