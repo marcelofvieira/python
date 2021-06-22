@@ -52,7 +52,15 @@ python manage.py makemigrations profiles_api
 
 #Para executar a migração executar o comando
  python manage.py migrate
- 
+
+ #Para criar um superuser no banco de dados do Django
+ python manage.py createsuperuser
+  admin
+  123
+
+#Ao subir o servidor com o admin habilitado o link para administrar o django
+http://localhost:8000/admin/
+
 
 #================================================================================
 #BANCO DE DADOS
